@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .nav{
+      padding: 5px;
+      background-color: rgb(182, 255, 212);
+    }
+    .a{
+      padding: 30px 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Exam</h1>
+    <nav>
+      <a routerLink="add-car" class="btn btn-primary">AddCar</a>
+      <br/>
+      <a routerLink="about" class="btn btn-primary">About</a>
+      <br/>
+      <a routerLink="home" class="btn btn-success">Home</a>
+      <br/>
+      <a routerLink="list-car" class="btn btn-success">ListCar</a>
+    </nav>
+  </div>
+  <router-outlet>
+  </router-outlet>
+  <footer>
+    <p>Hi)</p>
+  </footer>
+</body>
+</html>

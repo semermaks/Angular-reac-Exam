@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <table class="table" style="background-color: rgb(182, 255, 212);">
+    <thead>
+      <tr style="color: rgb(0, 0, 37);">
+        <th scope="col">#</th>
+        <th scope="col">Year</th>
+        <th scope="col">Price</th>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let us of readData'>
+        <th scope="row">{{us.id}}</th>
+        <td>{{us.year}}</td>
+        <td>{{us.price}}</td>
+        <td>{{us.name}}</td>
+        <td>
+          <button class="btn btn-sm btn-danger" (click)="deleteID(us.id)">Delete</button>
+          &nbsp;
+          <a [routerLink]="['/add-car',us.id]"  class="btn btn-sm btn-success">Update</a>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

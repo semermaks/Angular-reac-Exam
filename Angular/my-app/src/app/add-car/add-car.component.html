@@ -1,0 +1,23 @@
+<div class="container">
+  <div *ngIf="errormsg"  class="alert alert-danger alert-dismissible fade show"role="alert">
+    <strong>{{errormsg}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <form [formGroup]="productForm" >
+    <div class="col-lg-4 mt-2">
+      <input type="text" class="form-control" formControlName="name" placeholder="Enter a car name">
+    </div>
+    <div class="col-lg-4 mt-2">
+      <input type="text" class="form-control" formControlName="price" placeholder="Enter a price($)">
+    </div>
+    <div class="col-lg-4 mt-3">
+      <input type="text" class="form-control" formControlName="year" placeholder="Enter a year of starting production">
+    </div>
+    <div class="col-lg-4 mt-2" *ngIf="!getparamid" (click)="productSubmit()">
+      <button class="btn btn-primary btn-sm">ADD</button>
+    </div>
+    <div class="col-lg-4 mt-2" *ngIf="getparamid" (click)="productUpdate()">
+      <button class="btn btn-dark btn-sm">Update</button>
+    </div>
+  </form>
+</div>
